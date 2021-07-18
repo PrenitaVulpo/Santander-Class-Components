@@ -5,13 +5,14 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <p>Meu primeiro parágrafo em React.</p>
         <p>Meu segundo parágrafo em React.</p>
         <div>
           <pre>Cansei de parágrafos...</pre>
         </div>
-      </div>
+        <p>{new Date().toLocaleDateString("pt-BR")}</p>
+      </>
     );
   }
 }
