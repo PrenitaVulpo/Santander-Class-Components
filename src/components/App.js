@@ -1,11 +1,9 @@
 import React from 'react'
 import './App.css';
 import App2 from './App2';
+import App3 from './App3';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <>
@@ -15,6 +13,7 @@ class App extends React.Component {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia, quam sed officiis libero repellat voluptate dolores amet molestiae nostrum aperiam inventore veritatis aut quaerat, tenetur laudantium natus? Saepe, minus!
         </App2>
         <p>{new Date().toLocaleDateString("pt-BR")}</p>
+        <App3 />
       </>
     );
   }
