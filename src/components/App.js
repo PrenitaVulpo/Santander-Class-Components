@@ -1,22 +1,16 @@
-import React from 'react'
-import './App.css';
+import React from 'react';
 
-class App extends React.Component {
+class App2 extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
-      <>
-        <p>Meu primeiro parágrafo em React.</p>
-        <p>Meu segundo parágrafo em React.</p>
-        <div>
-          <pre>Cansei de parágrafos...</pre>
-        </div>
-        <p>{new Date().toLocaleDateString("pt-BR")}</p>
-      </>
-    );
+      <div className="box">
+        <div className="title">{this.props.title}</div>
+        <div className="text">{this.props.text}</div>
+      </div>);
   }
 }
 
-export default App;
+export default App2;
