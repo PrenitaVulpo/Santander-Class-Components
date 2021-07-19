@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App4 extends React.Component {
+class App5 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,11 +8,18 @@ class App4 extends React.Component {
       txtNome: ''
     }
   }
-  changeNome = (evt) => {
+
+  componentDidMount = () => {
+    const nome = sessionStorage.getItem('nome');
+    if (nome) this.setState({ nome });
+  }
+
+  changeTxtNome = (evt) => {
     this.setState({ txtNome: evt.target.value });
   }
   persistTxtNome = () => {
     this.setState({ nome: this.state.txtNome });
+    sessionStorage.setItem('nome', this.state.txtNome);
   }
   render() {
     const renderForm = () => {
@@ -24,13 +31,10 @@ class App4 extends React.Component {
       )
     };
 
-    const renderText = () => (<>
-      Nome: <input type='text' onChange={this.changeTxtNome} />
-      <button onClick={this.persistTxtNome}>Salvar</button>
-      <p>Olá {this.state.nome}</p></>);
+    const renderText = () => (<p>Olá {this.state.nome}</p>);
 
     return !this.state.nome ? renderForm() : renderText();
   }
 }
 
-export default App4;
+export default App5;
