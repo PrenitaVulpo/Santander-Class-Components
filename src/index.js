@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App6 from './components/App6';
+import Form from './components/App8/Form';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App6 />
+    <Form />
   </React.StrictMode>,
   document.getElementById('root')
 );
