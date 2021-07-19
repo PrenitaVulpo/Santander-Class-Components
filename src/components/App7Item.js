@@ -1,6 +1,6 @@
 import React from "react";
 
-class Ap6Item extends React.Component {
+class App7Item extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -16,4 +16,4 @@ class Ap6Item extends React.Component {
   }
 }
 
-export default Ap6Item
+export default App7Item
